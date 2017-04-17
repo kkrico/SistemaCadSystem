@@ -16,7 +16,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="classes\class-DFSystem.php" />
+    <Compile Include="classes\class-CadSystem.php" />
     <Compile Include="config.php" />
     <Compile Include="classes\class-MainController.php" />
     <Compile Include="controllers\home-controller.php" />

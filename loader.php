@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 if ( ! defined('ABSPATH')) exit;
 
@@ -23,4 +23,4 @@ if ( ! defined('DEBUG') || DEBUG === false ) {
 // Fun��es globais
 require_once ABSPATH . '/functions/global-functions.php';
 
-$dfSystem = new DFSystem();
+$dfSystem = new CadSystem();

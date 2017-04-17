@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * DFSystem short summary.
@@ -8,7 +8,7 @@
  * @version 1.0
  * @author ramos
  */
-class DFSystem
+class CadSystem
 {
     private $controlador;
     private $acao;
