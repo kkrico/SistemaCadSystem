@@ -1,3 +1,3 @@
 <?php
-   header("location:./view/index.php")
-?>
+
+require_once 'config.php';

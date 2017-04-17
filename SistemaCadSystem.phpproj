@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -15,77 +16,51 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="bootstrap\css\bootstrap-theme.css" />
-    <Compile Include="bootstrap\css\bootstrap-theme.css.map" />
-    <Compile Include="bootstrap\css\bootstrap-theme.min.css" />
-    <Compile Include="bootstrap\css\bootstrap-theme.min.css.map" />
-    <Compile Include="bootstrap\css\bootstrap.css" />
-    <Compile Include="bootstrap\css\bootstrap.css.map" />
-    <Compile Include="bootstrap\css\bootstrap.min.css" />
-    <Compile Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Compile Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Compile Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Compile Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Compile Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <Compile Include="bootstrap\js\bootstrap.js" />
-    <Compile Include="bootstrap\js\bootstrap.min.js" />
-    <Compile Include="bootstrap\js\npm.js" />
-    <Compile Include="class\AutoLoad.php" />
-    <Compile Include="class\Cliente.php" />
-    <Compile Include="class\Conexao.php" />
-    <Compile Include="class\Endereco.php" />
-    <Compile Include="class\FiinalizarSessao.php" />
-    <Compile Include="class\Funcionario.php" />
-    <Compile Include="class\Funcoes.php" />
-    <Compile Include="class\Pessoa.php" />
-    <Compile Include="class\Telefone.php" />
-    <Compile Include="class\Usuario.php" />
-    <Compile Include="interface\IPage.php" />
-    <Compile Include="nbproject\private\private.xml" />
-    <Compile Include="view\css\2-col-portfolio.css" />
-    <Compile Include="view\css\bootstrap.css" />
-    <Compile Include="view\css\bootstrap.min.css" />
-    <Compile Include="view\css\estilo.css" />
-    <Compile Include="view\fonts\glyphicons-halflings-regular.eot" />
-    <Compile Include="view\fonts\glyphicons-halflings-regular.svg" />
-    <Compile Include="view\fonts\glyphicons-halflings-regular.ttf" />
-    <Compile Include="view\fonts\glyphicons-halflings-regular.woff" />
-    <Compile Include="view\fonts\glyphicons-halflings-regular.woff2" />
-    <Compile Include="view\img\cliente.jpg" />
-    <Compile Include="view\img\funcionario.jpg" />
-    <Compile Include="view\img\home.png" />
-    <Compile Include="view\img\login.png" />
-    <Compile Include="view\img\os.PNG" />
-    <Compile Include="view\img\pesquisar.png" />
-    <Compile Include="view\img\usuario.jpg" />
-    <Compile Include="view\js\bootstrap.js" />
-    <Compile Include="view\js\bootstrap.min.js" />
-    <Compile Include="view\js\jquery-3.1.1.min.js" />
-    <Compile Include="view\js\jquery.js" />
-    <Compile Include="view\FormCadCliente.php" />
-    <Compile Include="view\FormCadFuncionario.php" />
-    <Compile Include="view\FormCadOs.php" />
-    <Compile Include="view\FormCadUsuario.php" />
-    <Compile Include="view\index.php" />
-    <Compile Include="view\ListaFuncionario.php" />
-    <Compile Include="dfsystem1.sql" />
-    <Compile Include="git.bat" />
+    <Compile Include="classes\class-DFSystem.php" />
+    <Compile Include="config.php" />
+    <Compile Include="classes\class-MainController.php" />
+    <Compile Include="controllers\home-controller.php" />
+    <Compile Include="functions\global-functions.php" />
+    <Compile Include="includes\404.php" />
+    <Compile Include="loader.php" />
     <Compile Include="index.php" />
-    <Compile Include="README.md" />
+    <Compile Include="views\home\home-view.php" />
+    <Compile Include="views\_includes\footer.php" />
+    <Compile Include="views\_includes\header.php" />
+    <Compile Include="views\_includes\menu.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bootstrap\css" />
-    <Folder Include="bootstrap\fonts" />
-    <Folder Include="bootstrap\js" />
-    <Folder Include="bootstrap" />
-    <Folder Include="class" />
-    <Folder Include="interface" />
-    <Folder Include="nbproject\private" />
-    <Folder Include="nbproject" />
-    <Folder Include="view\css" />
-    <Folder Include="view\fonts" />
-    <Folder Include="view\img" />
-    <Folder Include="view\js" />
-    <Folder Include="view" />
+    <Folder Include="fonts\" />
+    <Folder Include="functions\" />
+    <Folder Include="classes\" />
+    <Folder Include="controllers\" />
+    <Folder Include="includes\" />
+    <Folder Include="views\" />
+    <Folder Include="views\home\" />
+    <Folder Include="views\_css\bootstrap\" />
+    <Folder Include="views\_js\" />
+    <Folder Include="views\_includes\" />
+    <Folder Include="views\_css\" />
+    <Folder Include="views\_js\jquery\" />
+    <Folder Include="views\_js\bootstrap\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="README.md" />
+    <Content Include="views\_css\bootstrap\bootstrap-theme.css" />
+    <Content Include="views\_css\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="views\_css\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="views\_css\bootstrap\bootstrap-theme.min.css.map" />
+    <Content Include="views\_css\bootstrap\bootstrap.css" />
+    <Content Include="views\_css\bootstrap\bootstrap.css.map" />
+    <Content Include="views\_css\bootstrap\bootstrap.min.css" />
+    <Content Include="views\_css\bootstrap\bootstrap.min.css.map" />
+    <Content Include="views\_js\bootstrap\bootstrap.js" />
+    <Content Include="views\_js\bootstrap\bootstrap.min.js" />
+    <Content Include="views\_js\jquery\jquery-3.2.1.min.js" />
   </ItemGroup>
 </Project>
