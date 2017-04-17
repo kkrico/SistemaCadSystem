@@ -1,9 +1,9 @@
-<?php
+ï»¿<?php
 /**
  * Verifica chaves de arrays
  *
  * Verifica se a chave existe no array e se ela tem algum valor.
- * Obs.: Essa função está no escopo global, pois, vamos precisar muito da mesma.
+ * Obs.: Essa funï¿½ï¿½o estï¿½ no escopo global, pois, vamos precisar muito da mesma.
  *
  * @param array  $array O array
  * @param string $key   A chave do array
@@ -16,7 +16,7 @@ function chk_array ( $array, $key ) {
 		return $array[ $key ];
 	}
 
-	// Retorna nulo por padrão
+	// Retorna nulo por padrï¿½o
 	return null;
 }
 
@@ -33,7 +33,7 @@ function __autoload($class_name) {
 
 
 /**
- * Função que serve de URL Rewrite caso esteja usando Built in Server
+ * Funï¿½ï¿½o que serve de URL Rewrite caso esteja usando Built in Server
  */
 if (BUILTINWEBSERVER) {
 

@@ -1,8 +1,8 @@
-<?php
+ï»¿<?php
 
 if ( ! defined('ABSPATH')) exit;
 
-// Inicia a sessão
+// Inicia a sessï¿½o
 session_start();
 
 // Verifica o modo para debugar
@@ -20,7 +20,7 @@ if ( ! defined('DEBUG') || DEBUG === false ) {
 
 }
 
-// Funções globais
+// Funï¿½ï¿½es globais
 require_once ABSPATH . '/functions/global-functions.php';
 
 $dfSystem = new DFSystem();

@@ -1,7 +1,7 @@
-<?php
+ï»¿<?php
 
 /**
- * Controller da página inicial.
+ * Controller da pï¿½gina inicial.
  *
  *
  * @version 1.0
@@ -11,16 +11,16 @@ class HomeController extends MainController
 {
 
 	/**
-     * Carrega a página "/views/home/index.php"
+     * Carrega a pï¿½gina "/views/home/index.php"
      */
     public function index() {
-		// Título da página
+		// Tï¿½tulo da pï¿½gina
 		$this->title = 'Home';
 
-		// Parametros da função
+		// Parametros da funï¿½ï¿½o
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
 
-		// Essa página não precisa de modelo (model)
+		// Essa pï¿½gina nï¿½o precisa de modelo (model)
 
 		/** Carrega os arquivos do view **/
 

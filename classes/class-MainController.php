@@ -1,6 +1,6 @@
-<?php
+ï»¿<?php
 /**
- * MainController - Todos os controllers deverão estender essa classe
+ * MainController - Todos os controllers deverï¿½o estender essa classe
  */
 class MainController
 {
@@ -8,7 +8,7 @@ class MainController
 	/**
      * $db
      *
-     * Nossa conexão com a base de dados. Manterá o objeto PDO
+     * Nossa conexï¿½o com a base de dados. Manterï¿½ o objeto PDO
      *
      * @access public
      */
@@ -27,7 +27,7 @@ class MainController
 	/**
      * $title
      *
-     * Título das páginas
+     * Tï¿½tulo das pï¿½ginas
      *
      * @access public
      */
@@ -36,7 +36,7 @@ class MainController
 	/**
      * $login_required
      *
-     * Se a página precisa de login
+     * Se a pï¿½gina precisa de login
      *
      * @access public
      */
@@ -51,7 +51,7 @@ class MainController
 	/**
      * Construtor da classe
      *
-     * Configura as propriedades e métodos da classe.
+     * Configura as propriedades e mï¿½todos da classe.
      *
      * @since 0.1
      * @access public

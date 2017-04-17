@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 
 /**
  * DFSystem short summary.
@@ -21,19 +21,19 @@ class DFSystem
         $this->get_url_data();
 
 		/**
-         * Verifica se o controlador existe. Caso contrário, adiciona o
-         * controlador padrão (controllers/home-controller.php) e chama o método index().
+         * Verifica se o controlador existe. Caso contrï¿½rio, adiciona o
+         * controlador padrï¿½o (controllers/home-controller.php) e chama o mï¿½todo index().
          */
 		if ( ! $this->controlador ) {
 
-			// Adiciona o controlador padrão
+			// Adiciona o controlador padrï¿½o
 			require_once ABSPATH . '/controllers/home-controller.php';
 
 			// Cria o objeto do controlador "home-controller.php"
-			// Este controlador deverá ter uma classe chamada HomeController
+			// Este controlador deverï¿½ ter uma classe chamada HomeController
 			$this->controlador = new HomeController();
 
-			// Executa o método index()
+			// Executa o mï¿½todo index()
 			$this->controlador->index();
 
 			// FIM :)
@@ -41,9 +41,9 @@ class DFSystem
 
 		}
 
-		// Se o arquivo do controlador não existir, não faremos nada
+		// Se o arquivo do controlador nï¿½o existir, nï¿½o faremos nada
 		if ( ! file_exists( ABSPATH . '/controllers/' . $this->controlador . '.php' ) ) {
-			// Página não encontrada
+			// Pï¿½gina nï¿½o encontrada
 			require_once ABSPATH . $this->not_found;
 
 			// FIM :)
@@ -62,10 +62,10 @@ class DFSystem
 
 		$this->controlador = new $this->controlador( $this->parametros );
 
-		// Remove caracteres inválidos do nome da ação (método)
+		// Remove caracteres invï¿½lidos do nome da aï¿½ï¿½o (mï¿½todo)
 		$this->acao = preg_replace( '/[^a-zA-Z]/i', '', $this->acao );
 
-		// Se o método indicado existir, executa o método e envia os parâmetros
+		// Se o mï¿½todo indicado existir, executa o mï¿½todo e envia os parï¿½metros
 		if ( method_exists( $this->controlador, $this->acao ) ) {
 			$this->controlador->{$this->acao}( $this->parametros );
 
@@ -73,7 +73,7 @@ class DFSystem
 			return;
 		} // method_exists
 
-		// Sem ação, chamamos o método index
+		// Sem aï¿½ï¿½o, chamamos o mï¿½todo index
 		if ( ! $this->acao && method_exists( $this->controlador, 'index' ) ) {
 			$this->controlador->index( $this->parametros );
 
@@ -81,7 +81,7 @@ class DFSystem
 			return;
 		} // ! $this->acao
 
-		// Página não encontrada
+		// Pï¿½gina nï¿½o encontrada
 		require_once ABSPATH . $this->not_found;
 
 		// FIM :)
@@ -90,7 +90,7 @@ class DFSystem
 
     public function get_url_data () {
 
-		// Verifica se o parâmetro path foi enviado
+		// Verifica se o parï¿½metro path foi enviado
 		if ( isset( $_GET['path'] ) ) {
 
 			// Captura o valor de $_GET['path']
@@ -100,7 +100,7 @@ class DFSystem
             $path = rtrim($path, '/');
             $path = filter_var($path, FILTER_SANITIZE_URL);
 
-			// Cria um array de parâmetros
+			// Cria um array de parï¿½metros
 			$path = explode('/', $path);
 
 			// Configura as propriedades
@@ -108,24 +108,14 @@ class DFSystem
 			$this->controlador .= '-controller';
 			$this->acao         = chk_array( $path, 1 );
 
-			// Configura os parâmetros
+			// Configura os parï¿½metros
 			if ( chk_array( $path, 2 ) ) {
 				unset( $path[0] );
 				unset( $path[1] );
 
-				// Os parâmetros sempre virão após a ação
+				// Os parï¿½metros sempre virï¿½o apï¿½s a aï¿½ï¿½o
 				$this->parametros = array_values( $path );
 			}
-
-
-			// DEBUG
-			//
-			// echo $this->controlador . '<br>';
-			// echo $this->acao        . '<br>';
-			// echo '<pre>';
-			// print_r( $this->parametros );
-			// echo '</pre>';
 		}
-
 	}
 }

@@ -1,6 +1,6 @@
-<?php
+ï»¿<?php
 /**
- * Configuração geral
+ * Configuraï¿½ï¿½o geral
  */
 
 // Caminho para a raiz
@@ -18,24 +18,24 @@ define( 'HOSTNAME', 'localhost' );
 // Nome do DB
 define( 'DB_NAME', '' );
 
-// Usuário do DB
+// Usuï¿½rio do DB
 define( 'DB_USER', '' );
 
 // Senha do DB
 define( 'DB_PASSWORD', '' );
 
-// Charset da conexão PDO
+// Charset da conexï¿½o PDO
 define( 'DB_CHARSET', 'utf8' );
 
-// Se você estiver desenvolvendo, modifique o valor para true
+// Se vocï¿½ estiver desenvolvendo, modifique o valor para true
 define( 'DEBUG', true );
 
 define ('BUILTINWEBSERVER', true);
 
 /**
- * Não edite daqui em diante
+ * Nï¿½o edite daqui em diante
  */
 
-// Carrega o loader, que vai carregar a aplicação inteira
+// Carrega o loader, que vai carregar a aplicaï¿½ï¿½o inteira
 require_once ABSPATH . '/loader.php';
 ?>
