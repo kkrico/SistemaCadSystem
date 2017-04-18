@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="<?php echo HOME_URI;?>">
                 <img class="img" src="<?php echo HOME_URI ?>/views/img/home.png" alt="Home" width="35"></a>
         </div>
 
