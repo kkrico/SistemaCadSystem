@@ -17,6 +17,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="classes\class-CadSystem.php" />
+    <Compile Include="classes\class-MainModel.php" />
     <Compile Include="config.php" />
     <Compile Include="classes\class-MainController.php" />
     <Compile Include="controllers\cadastro-controller.php" />
@@ -37,6 +38,7 @@
     <Folder Include="classes\" />
     <Folder Include="controllers\" />
     <Folder Include="includes\" />
+    <Folder Include="models\" />
     <Folder Include="views\" />
     <Folder Include="views\home\" />
     <Folder Include="views\img\" />
@@ -47,6 +49,7 @@
     <Folder Include="views\_css\" />
     <Folder Include="views\_js\jquery\" />
     <Folder Include="views\_js\bootstrap\" />
+    <Folder Include="views\_js\cadastro\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -62,17 +65,11 @@
     <Content Include="views\img\os.PNG" />
     <Content Include="views\img\pesquisar.png" />
     <Content Include="views\img\usuario.jpg" />
-    <Content Include="views\_css\bootstrap\bootstrap-theme.css" />
-    <Content Include="views\_css\bootstrap\bootstrap-theme.css.map" />
-    <Content Include="views\_css\bootstrap\bootstrap-theme.min.css" />
-    <Content Include="views\_css\bootstrap\bootstrap-theme.min.css.map" />
-    <Content Include="views\_css\bootstrap\bootstrap.css" />
-    <Content Include="views\_css\bootstrap\bootstrap.css.map" />
     <Content Include="views\_css\bootstrap\bootstrap.min.css" />
-    <Content Include="views\_css\bootstrap\bootstrap.min.css.map" />
     <Content Include="views\_css\style.css" />
     <Content Include="views\_js\bootstrap\bootstrap.js" />
     <Content Include="views\_js\bootstrap\bootstrap.min.js" />
+    <Content Include="views\_js\cadastro\cliente.js" />
     <Content Include="views\_js\jquery\jquery-3.2.1.min.js" />
   </ItemGroup>
 </Project>
