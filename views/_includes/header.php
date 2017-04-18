@@ -10,6 +10,6 @@
     <link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo HOME_URI;?>/views/_css/style.css">
 
-    <title><?php echo $this->title; ?></title>
+    <title><?php echo $this->title; ?> -  CadSystem</title>
 </head>
 <body>

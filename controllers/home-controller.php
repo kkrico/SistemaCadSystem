@@ -1,18 +1,12 @@
 <?php
 
 /**
- * Controller da p�gina inicial.
- *
- *
+ * Controller da página inicial.
  * @version 1.0
  * @author ramos
  */
 class HomeController extends MainController
 {
-
-	/**
-     * Carrega a p�gina "/views/home/index.php"
-     */
     public function index() {
 		$this->title = 'Home';
 
@@ -23,6 +17,5 @@ class HomeController extends MainController
         require ABSPATH . '/views/home/home-view.php';
         require ABSPATH . '/views/_includes/footer.php';
 
-    } // index
-
-} // class HomeController
+    }
+}
