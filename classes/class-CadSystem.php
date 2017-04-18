@@ -1,9 +1,9 @@
 <?php
 
 /**
- * DFSystem short summary.
+ * Classe que bootstrapa a aplicação
  *
- * DFSystem description.
+ * Classe que bootstrapa a aplicação
  *
  * @version 1.0
  * @author ramos
