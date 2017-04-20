@@ -1,25 +1,23 @@
 <?php
 
 /**
- * cadastro_controller Controller que contem todos os cadastros
- *
- * cadastro_controller Controller que ir� manter todos os cadastros
+ * Controller que contem as operações para cliente
  *
  * @version 1.0
  * @author dframos
  */
-class CadastroController extends MainController
-{
+class ClienteController extends MainController {
 
-    public function cliente() {
+    public function novo() {
         
         $this->title = 'Cadastro de Clientes';
-
 		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
+
+        $modelo = $this->load_model('cliente/novo-cliente-model');
 
         require ABSPATH . '/views/_includes/header.php';
         require ABSPATH . '/views/_includes/menu.php';
-        require ABSPATH . '/views/cadastro/cliente-view.php';
+        require ABSPATH . '/views/cliente/novocliente-view.php';
         require ABSPATH . '/views/_includes/footer.php';
     }
 }

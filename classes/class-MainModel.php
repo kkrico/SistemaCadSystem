@@ -6,7 +6,6 @@
  */
 class MainModel
 {
-
 	public $form_data;
 	public $form_msg;
 	public $form_confirma;

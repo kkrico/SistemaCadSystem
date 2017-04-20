@@ -17,16 +17,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="classes\class-CadSystem.php" />
+    <Compile Include="classes\class-CadSystemDB.php" />
     <Compile Include="classes\class-MainModel.php" />
+    <Compile Include="classes\class-PasswordHash.php" />
+    <Compile Include="classes\class-UserLogin.php" />
     <Compile Include="config.php" />
     <Compile Include="classes\class-MainController.php" />
-    <Compile Include="controllers\cadastro-controller.php" />
+    <Compile Include="controllers\cliente-controller.php" />
     <Compile Include="controllers\home-controller.php" />
     <Compile Include="functions\global-functions.php" />
     <Compile Include="includes\404.php" />
     <Compile Include="loader.php" />
     <Compile Include="index.php" />
-    <Compile Include="views\cadastro\cliente-view.php" />
+    <Compile Include="models\cliente\novo-cliente-model.php" />
+    <Compile Include="views\cliente\novocliente-view.php" />
     <Compile Include="views\home\home-view.php" />
     <Compile Include="views\_includes\footer.php" />
     <Compile Include="views\_includes\header.php" />
@@ -39,10 +43,11 @@
     <Folder Include="controllers\" />
     <Folder Include="includes\" />
     <Folder Include="models\" />
+    <Folder Include="models\cliente\" />
     <Folder Include="views\" />
     <Folder Include="views\home\" />
     <Folder Include="views\img\" />
-    <Folder Include="views\cadastro\" />
+    <Folder Include="views\cliente\" />
     <Folder Include="views\_css\bootstrap\" />
     <Folder Include="views\_js\" />
     <Folder Include="views\_includes\" />

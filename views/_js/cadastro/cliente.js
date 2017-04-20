@@ -5,7 +5,7 @@
 $(function () {
     Cadastro["Cliente"] = {
         ValidarRegras: function () {
-            return false;
+            // TODO: Adicionar as regras para validar com javascript
         }
     }
 

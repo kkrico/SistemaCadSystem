@@ -1,63 +1,21 @@
-﻿<?php
+<?php
 /**
  * MainController - Todos os controllers dever�o estender essa classe
  */
-class MainController
+class MainController extends UserLogin
 {
 
-	/**
-     * $db
-     *
-     * Nossa conex�o com a base de dados. Manter� o objeto PDO
-     *
-     * @access public
-     */
 	public $db;
-
-	/**
-     * $phpass
-     *
-     * Classe phpass
-     *
-     * @see http://www.openwall.com/phpass/
-     * @access public
-     */
 	public $phpass;
-
-	/**
-     * $title
-     *
-     * T�tulo das p�ginas
-     *
-     * @access public
-     */
 	public $title;
-
-	/**
-     * $login_required
-     *
-     * Se a p�gina precisa de login
-     *
-     * @access public
-     */
-
-	/**
-     * $parametros
-     *
-     * @access public
-     */
 	public $parametros = array();
 
-	/**
-     * Construtor da classe
-     *
-     * Configura as propriedades e m�todos da classe.
-     *
-     * @since 0.1
-     * @access public
-     */
 	public function __construct ( $parametros = array() ) {
 
+        $this->db = new CadSystemDB();
+		
+		$this->phpass = new PasswordHash(8, false);
+		$this->parametros = $parametros;
 	}
 
 	/**

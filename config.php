@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Configura��o geral
  */
@@ -16,13 +16,13 @@ define( 'HOME_URI', 'http://localhost:3806' );
 define( 'HOSTNAME', 'localhost' );
 
 // Nome do DB
-define( 'DB_NAME', '' );
+define( 'DB_NAME', 'dfsystem' );
 
 // Usu�rio do DB
-define( 'DB_USER', '' );
+define( 'DB_USER', 'root' );
 
 // Senha do DB
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'root' );
 
 // Charset da conex�o PDO
 define( 'DB_CHARSET', 'utf8' );
