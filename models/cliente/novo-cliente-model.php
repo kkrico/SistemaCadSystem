@@ -30,12 +30,8 @@ class NovoClienteModel extends MainModel
 			return;
 		}
 
-        if ( chk_array( $this->parametros, 0 ) == 'edit' ) {
-			return;
-		}
-
-        
-        $query = $this->db->insert( 'tb_pessoa', $_POST );
+        $pessoa = $this->buscarPessoa();
+        $query = $this->db->insert( 'tb_pessoa', $pessoa );
 
         if ( $query ) {
             
@@ -44,5 +40,20 @@ class NovoClienteModel extends MainModel
 		} 
 
         $this->form_msg = '<p class="error">Erro ao enviar dados!</p>';
+    }
+
+    private function buscarPessoa() {
+        if ( 'POST' != $_SERVER['REQUEST_METHOD']) {
+			return null;
+		}
+
+        return array("nome" => $_POST["nome"],
+            "sobrenome" => $_POST["sobrenome"],
+            "rg" => $_POST["rg"],
+            "cpf" => $_POST["cpf"],
+            "email" => $_POST["email"],
+            "sexo" => $_POST["sexo"], 
+            "datanascimento" => $_POST["datanascimento"],
+            "datacadastro" => $_POST["datacadastropessoa"]);
     }
 }

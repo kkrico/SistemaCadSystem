@@ -325,5 +325,4 @@ class CadSystemDB
 		// The end :)
 		return;
 	} // delete
-	
 }

@@ -11,7 +11,6 @@ class ClienteController extends MainController {
     public function novo() {
         
         $this->title = 'Cadastro de Clientes';
-		$parametros = ( func_num_args() >= 1 ) ? func_get_arg(0) : array();
 
         $modelo = $this->load_model('cliente/novo-cliente-model');
 
