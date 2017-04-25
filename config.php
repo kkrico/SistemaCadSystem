@@ -30,7 +30,7 @@ define( 'DB_CHARSET', 'utf8' );
 // Se voc� estiver desenvolvendo, modifique o valor para true
 define( 'DEBUG', true );
 
-define ('BUILTINWEBSERVER', false);
+define ('BUILTINWEBSERVER', true);
 
 /**
  * N�o edite daqui em diante

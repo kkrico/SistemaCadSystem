@@ -19,7 +19,7 @@
                     <a href="/view/FormCadCliente.php">Cliente</a>
                 </li>
                 <li>
-                    <a href="FormCadFuncionario.php">Funcionário</a>
+                    <a href="<?php echo HOME_URI ?>/funcionario/index">Funcionário</a>
                 </li>
                 <li>
                     <a href="FormCadOs.php">Ordem de Serviço</a>
