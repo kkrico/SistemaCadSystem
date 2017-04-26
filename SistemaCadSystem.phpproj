@@ -21,6 +21,7 @@
     <Compile Include="classes\class-CadSystemDB.php" />
     <Compile Include="classes\class-MainModel.php" />
     <Compile Include="classes\class-PasswordHash.php" />
+    <Compile Include="classes\class-Sexo.php" />
     <Compile Include="classes\class-TipoMensagem.php" />
     <Compile Include="classes\class-TipoTelefone.php" />
     <Compile Include="classes\class-UF.php" />
@@ -86,6 +87,7 @@
     <Content Include="views\_js\bootstrap\bootstrap.min.js" />
     <Content Include="views\_js\cliente\index.js" />
     <Content Include="views\_js\cliente\novo.js" />
+    <Content Include="views\_js\global.js" />
     <Content Include="views\_js\jquery\jquery-3.2.1.min.js" />
   </ItemGroup>
 </Project>

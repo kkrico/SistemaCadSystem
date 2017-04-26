@@ -3,34 +3,30 @@
 <?php $modelo->mostrarMensagem(); ?>
 
 <div class="page-header">
-    <br>
     <h1>Cadastro de Cliente</h1>
 </div>
 <div id="formulario">
     <form name="formControl" id="cliente" action="" method="POST">
         <div class="row">
-            <div class="col-md-2">
-                <label>Data de Cadastro:</label>
-                <input type="date" id="datacadastropessoa" name="datacadastropessoa" class="form-control" />
-            </div>
-
-        </div>
-
-        <br />
-        <div class="row">
             <div class="col-md-3">
-                <label>Nome:</label>
-                <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" />
+                <div class="form-group">
+                    <label class="control-label">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required/>
+                </div>
             </div>
 
             <div class="col-md-3">
-                <label>Sobrenome:</label>
-                <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome" />
+                <div class="form-group">
+                    <label class="control-label">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome" required/>
+                </div>
             </div>
 
             <div class="col-md-3">
-                <label>CPF:</label>
-                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" />
+                <div class="form-group">
+                    <label class="control-label">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" required/>
+                </div>
             </div>
 
             <div class="col-md-3">
@@ -50,11 +46,8 @@
             <div class="col-md-1">
                 <label>Sexo:</label>
                 <br>
-                <input type="radio" name="sexo" value="1">
-                M 
-               
-                <input type="radio" name="sexo" value="2">
-                F
+
+                <?php $modelo->radioButtonPara(Sexo::getConstants(), "sexo"); ?>
            
             </div>
 
@@ -82,96 +75,117 @@
             </div>
 
             <div class='col-md-1'>
-                <label>UF:</label>
-                 <?php $modelo->dropDownPara(UF::getConstants(), "UF", "uf") ?>
+                <div class="form-group">
+                    <label class="control-label">UF:</label>
+                    <?php $modelo->dropDownPara(UF::getConstants(), "UF", "uf") ?>
+                </div>
             </div>
 
             <div class='col-md-4'>
-                <label>Ponto de Referência:</label>
-                <input type="text" id="ptreferencia" name="ptreferencia" class="form-control" placeholder="Ponto de Referência" />
+                <div class="form-group">
+                    <label class="control-label">Ponto de Referência:</label>
+                    <input type="text" id="ptreferencia" name="ptreferencia" class="form-control" placeholder="Ponto de Referência" />
+                </div>
             </div>
 
             <div class='col-md-2'>
-                <label>CEP:</label>
-                <input type="text" id="cep" name="cep" class="form-control" placeholder="CEP" />
+                <div class="form-group">
+                    <label class="control-label">CEP:</label>
+                    <input type="text" id="cep" name="cep" class="form-control" placeholder="CEP" />
+                </div>
             </div>
         </div>
 
         <br>
         <div class="row">
             <div class='col-md-2'>
-                <label>Tipo de Telefone:</label>
-                <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "TipoTelefone1") ?>
+                <div class="form-group">
+                    <label class="control-label">Tipo de Telefone:</label>
+                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "TipoTelefone1") ?>
+                </div>
             </div>
 
             <div class='col-md-1'>
-                <label>DDD:</label>
-                <input type="text" id="dddtelefone1" name="dddtelefone" class="form-control" placeholder="DDD" />
+                <div class="form-group">
+                    <label class="control-label">DDD:</label>
+                    <input type="text" id="dddtelefone1" name="dddtelefone" class="form-control" placeholder="DDD" />
+                </div>
             </div>
 
             <div class='col-md-3'>
-                <label>Nº Telefone</label>
-                <input type="text" id="numtelefone1" name="numtelefone" class="form-control" placeholder="NºTelefone" />
+                <div class="form-group">
+                    <label class="control-label">Nº Telefone</label>
+                    <input type="text" id="numtelefone1" name="numtelefone" class="form-control" placeholder="NºTelefone" />
+                </div>
             </div>
 
 
             <div class='col-md-2'>
-                <label>Operadora:</label>
-                <input type="text" id="operadora1" name="operadora" class="form-control" placeholder="Operadora" />
+                <div class="form-group">
+                    <label class="control-label">Operadora:</label>
+                    <input type="text" id="operadora1" name="operadora" class="form-control" placeholder="Operadora" />
+                </div>
             </div>
 
             <div class='col-md-4'>
-                <label>Melhor Horário para contato:</label>
-                <input type="text" id="horariocontato1" name="horariocontato" class="form-control" placeholder="Melhor Horário" />
+                <div class="form-group">
+                    <label class="control-label">Melhor Horário para contato:</label>
+                    <input type="text" id="horariocontato1" name="horariocontato" class="form-control" placeholder="Melhor Horário" />
+                </div>
             </div>
         </div>
 
         <br />
         <div class="row">
             <div class='col-md-2'>
-                <label>Tipo de Telefone:</label>
-                <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "TipoTelefone2") ?>
+                <div class="form-group">
+                    <label class="control-label">Tipo de Telefone:</label>
+                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "TipoTelefone2") ?>
+                </div>
             </div>
 
             <div class='col-md-1'>
-                <label>DDD:</label>
-                <input type="text" id="dddtelefone2" name="dddtelefone" class="form-control" placeholder="DDD" />
+                <div class="form-group">
+                    <label class="control-label">DDD:</label>
+                    <input type="text" id="dddtelefone2" name="dddtelefone" class="form-control" placeholder="DDD" />
+                </div>
             </div>
 
             <div class='col-md-3'>
-                <label>Nº Telefone</label>
-                <input type="text" id="numtelefone2" name="numtelefone" class="form-control" placeholder="NºTelefone" />
+                <div class="form-group">
+                    <label class="control-label">Nº Telefone</label>
+                    <input type="text" id="numtelefone2" name="numtelefone" class="form-control" placeholder="NºTelefone" />
+                </div>
             </div>
 
             <div class='col-md-2'>
-                <label>Operadora:</label>
-                <input type="text" id="operadora2" name="operadora" class="form-control" placeholder="Operadora" />
+                <div class="form-group">
+                    <label class="control-label">Operadora:</label>
+                    <input type="text" id="operadora2" name="operadora" class="form-control" placeholder="Operadora" />
+                </div>
             </div>
 
             <div class='col-md-4'>
-                <label>Melhor Horário para contato:</label>
-                <input type="text" id="horariocontato2" name="horariocontato" class="form-control" placeholder="Melhor Horário" />
+                <div class="form-group">
+                    <label class="control-label">Melhor Horário para contato:</label>
+                    <input type="text" id="horariocontato2" name="horariocontato" class="form-control" placeholder="Melhor Horário" />
+                </div>
             </div>
         </div>
 
         <br>
         <div class="row">
-            <div class="col-md-3"></div>
-
-            <div class="col-md-2">
-                <br>
+            <div class="col-md-offset-3 col-md-2">
                 <input type="button" name="btCancelar" id="txCancelar" style="width: 100%;"
-                    class="btn btn-warning" value="Cancelar" onclick="" />
+                    class="btn btn-warning" value="Cancelar" onclick="window.history.back();" />
             </div>
 
             <div class="col-md-2">
-                <br>
                 <input type="reset" name="btLimpar" id="txLimpar" style="width: 100%;"
-                    class="btn btn-info" value="Limpar" />
+                    class="btn btn-info" value="Limpar"/>
             </div>
 
             <div class="col-md-2">
-                <br>
                 <input type="submit" name="btSalvar" id="txGravar" style="width: 100%;"
                     class="btn btn-success" value="Salvar" />
             </div>

@@ -1,9 +1,8 @@
 <?php
 
 /**
- * class_UF short summary.
+ * Enum que retorna as UF's
  *
- * class_UF description.
  *
  * @version 1.0
  * @author dframos
