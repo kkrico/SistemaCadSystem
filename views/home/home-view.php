@@ -1,6 +1,5 @@
 <?php if ( ! defined('ABSPATH')) exit; ?>
 
-
 <header class="jumbotron hero-spacer">
     <h3 align="center">Seja Bem Vindo usuário!</h3>
 </header>

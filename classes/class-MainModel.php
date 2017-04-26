@@ -13,6 +13,7 @@ class MainModel
 	public $controller;
 	public $parametros;
 	public $userdata;
+    public $tipomensagem;
 
 	public function inverte_data( $data = null ) {
         
@@ -60,5 +61,12 @@ class MainModel
             echo "<option value=".$val.">".$key."</option>";
         }
         echo "</select>";
+    }
+
+    public function mostrarMensagem(){
+        
+        if (isset($_SESSION["Mensagem"])) {
+            echo "Uma mensagem";
+        }
     }
 }

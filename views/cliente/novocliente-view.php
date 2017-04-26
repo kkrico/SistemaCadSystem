@@ -1,5 +1,6 @@
 <?php if ( ! defined('ABSPATH')) exit; ?>
 
+<?php $modelo->mostrarMensagem(); ?>
 
 <div class="page-header">
     <br>

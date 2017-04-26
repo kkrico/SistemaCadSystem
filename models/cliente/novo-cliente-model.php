@@ -10,6 +10,7 @@
  */
 class NovoClienteModel extends MainModel
 {
+
     public function __construct( $db = false, $controller = null ) {
 		// Configura o DB (PDO)
 		$this->db = $db;
@@ -59,7 +60,10 @@ class NovoClienteModel extends MainModel
             "datacadastro" => date_create('now')->format('Y-m-d H:i:s'));
     }
 
-    private function redirectComMessagem($tipoMensagem, $url, $mensagem){
+    private function redirectComMessagem($tipoMensagem, $url, $msg){
+        
         header("Location: ".$url);
+        $_SESSION["TipoMensagem"] = $tipoMensagem;
+        $_SESSION["Mensagem"] = $msg;
     }
 }
