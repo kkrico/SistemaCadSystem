@@ -35,11 +35,13 @@ class NovoClienteModel extends MainModel
 
         if ( $query ) {
             
+            $this->redirectComMessagem(TipoMensagem::SUCESSO, HOME_URI . "/cliente/novo", "Inserido com sucesso");
 			$this->form_msg = '<p class="success">Notícia atualizada com sucesso!</p>';
 			return;
 		} 
 
-        $this->form_msg = '<p class="error">Erro ao enviar dados!</p>';
+        $this->redirectComMessagem(TipoMensagem::ALERTA, HOME_URI . "/cliente/novo", $query);
+
     }
 
     private function buscarPessoa() {
@@ -54,6 +56,10 @@ class NovoClienteModel extends MainModel
             "email" => $_POST["email"],
             "sexo" => $_POST["sexo"], 
             "datanascimento" => $_POST["datanascimento"],
-            "datacadastro" => $_POST["datacadastropessoa"]);
+            "datacadastro" => date_create('now')->format('Y-m-d H:i:s'));
+    }
+
+    private function redirectComMessagem($tipoMensagem, $url, $mensagem){
+        header("Location: ".$url);
     }
 }

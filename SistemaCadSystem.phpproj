@@ -16,10 +16,14 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="classes\class-BasicEnum.php" />
     <Compile Include="classes\class-CadSystem.php" />
     <Compile Include="classes\class-CadSystemDB.php" />
     <Compile Include="classes\class-MainModel.php" />
     <Compile Include="classes\class-PasswordHash.php" />
+    <Compile Include="classes\class-TipoMensagem.php" />
+    <Compile Include="classes\class-TipoTelefone.php" />
+    <Compile Include="classes\class-UF.php" />
     <Compile Include="classes\class-UserLogin.php" />
     <Compile Include="config.php" />
     <Compile Include="classes\class-MainController.php" />

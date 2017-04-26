@@ -14,6 +14,10 @@ class ClienteController extends MainController {
 
         $modelo = $this->load_model('cliente/novo-cliente-model');
 
+
+        // POST
+        $modelo->cadastrarCliente();
+
         require ABSPATH . '/views/_includes/header.php';
         require ABSPATH . '/views/_includes/menu.php';
         require ABSPATH . '/views/cliente/novocliente-view.php';

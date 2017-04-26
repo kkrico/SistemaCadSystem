@@ -15,11 +15,11 @@ class MainModel
 	public $userdata;
 
 	public function inverte_data( $data = null ) {
-	
+        
 		$nova_data = null;
 		
 		if ( $data ) {
-		
+            
 			$data = preg_split('/\-|\/|\s|:/', $data);
 			
 			$data = array_map( 'trim', $data );
@@ -43,4 +43,22 @@ class MainModel
 		
 		return $nova_data;
 	}
+
+
+    public function dropDownPara($data, $textoPadrao, $nome) {
+        
+        echo "<select class='form-control' name=".$nome.">";
+        
+        // Obtém as chaves como colunas e valores como valores
+        foreach ( $data as $key => $val ) {
+            
+            // A primeira volta do laço configura as colunas
+            if ( $val === 0 ) {
+                echo "<option selected>". $textoPadrao ."</option>";
+            }
+            
+            echo "<option value=".$val.">".$key."</option>";
+        }
+        echo "</select>";
+    }
 }

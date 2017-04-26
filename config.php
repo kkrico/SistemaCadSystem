@@ -22,7 +22,7 @@ define( 'DB_NAME', 'dfsystem' );
 define( 'DB_USER', 'root' );
 
 // Senha do DB
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'root' );
 
 // Charset da conex�o PDO
 define( 'DB_CHARSET', 'utf8' );
