@@ -15,7 +15,7 @@
     <div class="col-md-4 portfolio-item">
         <a href="">
             <img class="img" src="<?php echo HOME_URI ?>/views/img/cliente.jpg" alt="Cliente" width="120"></a>
-        <h3><a href="<?php echo HOME_URI ?>/cliente/novo">Cliente</a></h3>
+        <h3><a href="<?php echo HOME_URI ?>/cliente">Cliente</a></h3>
     </div>
 
     <div class="col-md-4 portfolio-item">

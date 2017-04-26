@@ -16,7 +16,7 @@ if (isset($_GET[path])) :
         <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/cliente/novo.js"></script>
 <?php
                                                   
-    elseif ($_GET[path] === "cliente/index") :
+    elseif ($_GET[path] === "cliente/index" || $_GET[path] === "cliente" || $_GET[path] === "cliente/") :
 ?>
         <link rel="stylesheet" href="<?php echo HOME_URI ?>/views/_css/bootstraptable/bootstrap-table.min.css" />
         <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/bootstraptable/bootstrap-table.min.js"></script>
