@@ -34,6 +34,7 @@
     <Compile Include="loader.php" />
     <Compile Include="index.php" />
     <Compile Include="models\cliente\novo-cliente-model.php" />
+    <Compile Include="views\cliente\indexcliente-view.php" />
     <Compile Include="views\cliente\novocliente-view.php" />
     <Compile Include="views\home\home-view.php" />
     <Compile Include="views\_includes\footer.php" />
@@ -41,7 +42,7 @@
     <Compile Include="views\_includes\menu.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="fonts\" />
+    <Folder Include="views\_css\fonts\" />
     <Folder Include="functions\" />
     <Folder Include="classes\" />
     <Folder Include="controllers\" />
@@ -53,19 +54,21 @@
     <Folder Include="views\img\" />
     <Folder Include="views\cliente\" />
     <Folder Include="views\_css\bootstrap\" />
+    <Folder Include="views\_css\bootstraptable\" />
     <Folder Include="views\_js\" />
     <Folder Include="views\_includes\" />
     <Folder Include="views\_css\" />
+    <Folder Include="views\_js\bootstraptable\" />
     <Folder Include="views\_js\jquery\" />
     <Folder Include="views\_js\bootstrap\" />
-    <Folder Include="views\_js\cadastro\" />
+    <Folder Include="views\_js\cliente\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="views\_css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="views\_css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="views\_css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="views\_css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="views\_css\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="README.md" />
     <Content Include="views\img\cliente.jpg" />
     <Content Include="views\img\funcionario.jpg" />
@@ -74,11 +77,15 @@
     <Content Include="views\img\os.PNG" />
     <Content Include="views\img\pesquisar.png" />
     <Content Include="views\img\usuario.jpg" />
+    <Content Include="views\_css\bootstraptable\bootstrap-table.min.css" />
     <Content Include="views\_css\bootstrap\bootstrap.min.css" />
     <Content Include="views\_css\style.css" />
+    <Content Include="views\_js\bootstraptable\bootstrap-table-pt-BR.js" />
+    <Content Include="views\_js\bootstraptable\bootstrap-table.min.js" />
     <Content Include="views\_js\bootstrap\bootstrap.js" />
     <Content Include="views\_js\bootstrap\bootstrap.min.js" />
-    <Content Include="views\_js\cadastro\cliente.js" />
+    <Content Include="views\_js\cliente\index.js" />
+    <Content Include="views\_js\cliente\novo.js" />
     <Content Include="views\_js\jquery\jquery-3.2.1.min.js" />
   </ItemGroup>
 </Project>
