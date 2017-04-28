@@ -38,10 +38,11 @@ class NovoClienteModel extends MainModel
             
             $this->redirectComMessagem(TipoMensagem::SUCESSO, HOME_URI . "/cliente/novo", "Inserido com sucesso");
 			$this->form_msg = '<p class="success">Notícia atualizada com sucesso!</p>';
-			return;
+			return true;
 		} 
 
         $this->redirectComMessagem(TipoMensagem::ALERTA, HOME_URI . "/cliente/novo", $query);
+        return false;
 
     }
 

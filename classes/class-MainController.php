@@ -53,4 +53,14 @@ class MainController extends UserLogin
 
 		}
 	}
+
+    public function load_view($nomeDaView, $model){
+
+        $modelo = $model;
+
+        require ABSPATH . '/views/_includes/header.php';
+        require ABSPATH . '/views/_includes/menu.php';
+        require ABSPATH . '/views/cliente/'.$nomeDaView.'-view.php';
+        require ABSPATH . '/views/_includes/footer.php';
+    }
 }

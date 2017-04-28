@@ -74,7 +74,7 @@ class MainModel
 
     public function mostrarMensagem(){
 
-        if (isset($_SESSION["Mensagem"])) {
+        if (isset($_SESSION["MENSAGEM"])) {
             echo "Uma mensagem";
         }
     }
