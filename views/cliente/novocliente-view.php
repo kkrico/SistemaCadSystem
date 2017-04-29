@@ -29,13 +29,13 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" data-required/ />
+                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" data-required data-mask="000.000.000-00" />
                 </div>
             </div>
 
             <div class="col-md-3">
                 <label>RG:</label>
-                <input type="text" id="rg" name="rg" class="form-control" placeholder="RG" />
+                <input type="text" id="rg" name="rg" class="form-control" placeholder="RG" data-mask="0.000.000">
             </div>
         </div>
 
@@ -99,7 +99,7 @@
             <div class='col-md-2'>
                 <div class="form-group">
                     <label class="control-label">CEP:</label>
-                    <input type="text" id="cep" name="cep" class="form-control" placeholder="CEP" />
+                    <input type="text" id="cep" name="cep" class="form-control" placeholder="CEP" data-mask="00000-000" />
                 </div>
             </div>
         </div>

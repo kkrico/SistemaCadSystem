@@ -17,6 +17,7 @@ if (isset($_GET[path])) :
     <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/bootstrapdatepicker/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/bootstrapdatepicker/bootstrap-datepicker.pt-BR.min.js"></script>
     <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/jquerymask/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/cliente/novo.js"></script>
 
 <?php
                                                   
