@@ -10,11 +10,14 @@
     <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/global.js"></script>
 
 <?php 
-
 if (isset($_GET[path])) :
     if ($_GET[path] === "cliente/novo") :
 ?>
-        <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/cliente/novo.js"></script>
+    <link rel="stylesheet" href="<?php echo HOME_URI ?>/views/_css/bootstrapdatepicker/bootstrap-datepicker.min.css"></link>
+    <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/bootstrapdatepicker/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/bootstrapdatepicker/bootstrap-datepicker.pt-BR.min.js"></script>
+    <script type="text/javascript" src="<?php echo HOME_URI ?>/views/_js/jquerymask/jquery.mask.min.js"></script>
+
 <?php
                                                   
     elseif ($_GET[path] === "cliente/index" || $_GET[path] === "cliente" || $_GET[path] === "cliente/") :

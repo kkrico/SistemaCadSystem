@@ -1,31 +1,35 @@
 <?php if ( ! defined('ABSPATH')) exit; ?>
 
-<?php $modelo->mostrarMensagem(); ?>
-
 <div class="page-header">
     <h1>Cadastro de Cliente</h1>
 </div>
+
+<div id="validacao" class="oculto">
+    <div class="alert alert-danger" role="alert">
+
+    </div>
+</div>
 <div id="formulario">
-    <form name="formControl" id="cliente" action="" method="POST">
+    <form name="formControl" id="cliente" action="" method="POST" novalidate>
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">Nome:</label>
-                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required/>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" data-required/ />
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome" required/>
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome" data-required/ />
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" required/>
+                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" data-required/ />
                 </div>
             </div>
 
@@ -39,21 +43,25 @@
         <div class="row">
 
             <div class="col-md-2">
-                <label>Data de Nascimento:</label>
-                <input type="date" id="datanascimento" name="datanascimento" class="form-control" />
+                <div class="form-group">
+                    <label class="control-label">Data de Nascimento:</label>
+                    <input type="text" id="datanascimento" name="datanascimento" class="form-control" data-provide="datepicker" data-mask="00/00/0000" />
+                </div>
             </div>
 
             <div class="col-md-1">
                 <label>Sexo:</label>
-                <br>
+                <br />
 
                 <?php $modelo->radioButtonPara(Sexo::getConstants(), "sexo"); ?>
-           
+
             </div>
 
             <div class="col-md-4">
-                <label>E-mail:</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" />
+                <div class="form-group">
+                    <label class="control-label">E-mail:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" />
+                </div>
             </div>
 
             <div class='col-md-5'>
@@ -62,7 +70,7 @@
             </div>
         </div>
 
-        <br>
+        <br />
         <div class="row">
             <div class='col-md-3'>
                 <label>Bairro:</label>
@@ -96,7 +104,7 @@
             </div>
         </div>
 
-        <br>
+        <br />
         <div class="row">
             <div class='col-md-2'>
                 <div class="form-group">
@@ -173,7 +181,7 @@
             </div>
         </div>
 
-        <br>
+        <br />
         <div class="row">
             <div class="col-md-offset-3 col-md-2">
                 <input type="button" name="btCancelar" id="txCancelar" style="width: 100%;"
@@ -182,7 +190,7 @@
 
             <div class="col-md-2">
                 <input type="reset" name="btLimpar" id="txLimpar" style="width: 100%;"
-                    class="btn btn-info" value="Limpar"/>
+                    class="btn btn-info" value="Limpar" />
             </div>
 
             <div class="col-md-2">

@@ -1,9 +1,13 @@
-﻿
-
-$(function () {
+﻿$(function () {
     Cadastro["Cliente"] = {
         ValidarRegras: function () {
-            Cadastro.ValidarCamposObrigatorios();
+            Cadastro.LimparValidacao();
+            var campoObrigatorioInvalido = Cadastro.ValidarCamposObrigatorios();
+
+            var campoEmailInvalido = Cadastro.ValidarEmail();
+
+            var contemErros = campoEmailInvalido || campoObrigatorioInvalido;
+            return !contemErros;
         }
     }
 
