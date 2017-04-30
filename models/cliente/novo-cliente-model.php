@@ -28,7 +28,7 @@ class NovoClienteModel extends MainModel
     public function cadastrarCliente() {
 
 
-        if ( 'POST' != $_SERVER['REQUEST_METHOD'] || empty( $_POST['insere_noticia'] ) ) {
+        if ( 'POST' != $_SERVER['REQUEST_METHOD'] ) {
 			return;
 		}
 
@@ -63,10 +63,16 @@ class NovoClienteModel extends MainModel
 			return null;
 		}
 
+
+        $cpf = $_POST["cpf"];
+
+        $cpf = str_replace("-", "", $cpf);
+        $cpf = str_replace(".", "", $cpf);
+
         return array("nome" => $_POST["nome"],
             "sobrenome" => $_POST["sobrenome"],
             "rg" => $_POST["rg"],
-            "cpf" => $_POST["cpf"],
+            "cpf" => str_replace("-", "", $cpf),
             "email" => $_POST["email"],
             "sexo" => $_POST["sexo"],
             "datanascimento" => $_POST["datanascimento"],

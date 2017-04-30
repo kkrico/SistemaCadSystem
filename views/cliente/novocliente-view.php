@@ -4,6 +4,12 @@
     <h1>Cadastro de Cliente</h1>
 </div>
 
+<?php
+
+$modelo->cadastrarCliente();
+
+?>
+
 
 <?php
 echo $modelo->form_msg;
@@ -56,10 +62,11 @@ echo $modelo->form_msg;
             </div>
 
             <div class="col-md-1">
-                <label>Sexo:</label>
-                <br />
-
-                <?php $modelo->radioButtonPara(Sexo::getConstants(), "sexo"); ?>
+                <div class="form-group">
+                    <label class="control-label">Sexo:</label>
+                    <br />
+                    <?php $modelo->radioButtonPara(Sexo::getConstants(), "sexo", "required"); ?>
+                </div>
 
             </div>
 

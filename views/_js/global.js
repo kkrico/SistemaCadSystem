@@ -8,11 +8,19 @@
 Cadastro = {
     ValidarCamposObrigatorios: function () {
 
-        var camposObrigatorios = $("[required]");
+        var camposObrigatorios = $("[required]:not(input[type=radio])");
+        var camposRadioObrigatorios = $("input[type=radio][required]");
 
-        var contemCampoObrigatorioNaoPreenchido = camposObrigatorios.toArray().some(function(campo) {
+        var contemRadioPreenchido = camposRadioObrigatorios.toArray().some(function(campo) {
+            return $(campo).is(":checked");
+        });
+        var contemAlgumCampoObrigatorioNaoPreenchido = camposObrigatorios.toArray().some(function(campo) {
             return $(campo).val() === "";
         });
+
+        if (!contemRadioPreenchido) {
+            camposRadioObrigatorios.closest(".form-group").addClass("has-error");
+        }
 
         $.each(camposObrigatorios, function (indice, campo) {
 
@@ -23,10 +31,12 @@ Cadastro = {
             }
         });
 
-        if (contemCampoObrigatorioNaoPreenchido)
+
+        var resultadoInValido = contemAlgumCampoObrigatorioNaoPreenchido || !contemRadioPreenchido;
+        if (resultadoInValido)
             CadSystem.MostrarMensagemErro("Favor informar campos obrigatórios");
 
-        return !contemCampoObrigatorioNaoPreenchido; // Deve retornar true SE for válido
+        return !resultadoInValido; // Deve retornar true SE for válido
     },
 
 

@@ -64,11 +64,11 @@ class MainModel
     }
 
 
-    public function radioButtonPara($data, $nome) {
+    public function radioButtonPara($data, $nome, $htmlAttributes) {
 
         foreach ( $data as $key => $val ) {
 
-            echo "<input type='radio' name=".$nome." value=".$val."/> ".$key. " ";
+            echo "<input type='radio' name=".$nome." ".$htmlAttributes." value=".$val."/> ".$key. " ";
         }
     }
 
