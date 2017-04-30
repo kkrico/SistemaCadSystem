@@ -8,30 +8,39 @@
 Cadastro = {
     ValidarCamposObrigatorios: function () {
 
-        var camposObrigatorios = $("[data-required]");
+        var camposObrigatorios = $("[required]");
 
-        var contemErro = false;
+        var contemCampoObrigatorioNaoPreenchido = camposObrigatorios.toArray().some(function(campo) {
+            return $(campo).val() === "";
+        });
+
         $.each(camposObrigatorios, function (indice, campo) {
 
             campo = $(campo);
-
-            var contemCampoNaoPreenchido = campo.val() === "";
-            if (contemCampoNaoPreenchido) {
-                contemErro = contemCampoNaoPreenchido;
+            var naoPreenchido = campo.val() === "";
+            if (naoPreenchido) {
                 campo.closest(".form-group").addClass("has-error");
-
             }
         });
 
-        if (contemErro)
+        if (contemCampoObrigatorioNaoPreenchido)
             CadSystem.MostrarMensagemErro("Favor informar campos obrigatórios");
 
-        return contemErro;
+        return !contemCampoObrigatorioNaoPreenchido; // Deve retornar true SE for válido
     },
 
 
     ValidarCPF: function (cpf) {
         var numeros, digitos, soma, i, resultado, digitos_iguais;
+
+
+        String.prototype.replaceAll = function (search, replacement) {
+            var target = this;
+            return target.split(search).join(replacement);
+        };
+
+
+        cpf = cpf.replaceAll(",", "").replaceAll(".", "").replaceAll("-", "");
         digitos_iguais = 1;
         if (cpf.length < 11) {
             CadSystem.MostrarMensagemErro("CPF Inválido");
@@ -83,15 +92,14 @@ Cadastro = {
                 CadSystem.MostrarMensagemErro("Email inválido");
             }
 
-            return true;
+            return emailValido;
         }
 
-        return false;
+        return true;
     },
 
 
     LimparValidacao: function () {
-        debugger;
         $("div").removeClass("has-error");
         var divComMensagemValidacao = $("#validacao div");
         divComMensagemValidacao.empty();

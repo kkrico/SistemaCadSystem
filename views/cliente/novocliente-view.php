@@ -4,6 +4,12 @@
     <h1>Cadastro de Cliente</h1>
 </div>
 
+
+<?php
+echo $modelo->form_msg;
+
+?>
+
 <div id="validacao" class="oculto">
     <div class="alert alert-danger" role="alert">
 
@@ -15,21 +21,21 @@
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">Nome:</label>
-                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" data-required/ />
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required/ />
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome" data-required/ />
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome" required/ />
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="form-group">
                     <label class="control-label">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" data-required data-mask="000.000.000-00" />
+                    <input type="text" id="cpf" name="cpf" class="form-control" placeholder="CPF" required data-mask="000.000.000-00" />
                 </div>
             </div>
 

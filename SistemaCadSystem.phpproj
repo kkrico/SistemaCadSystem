@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="views\login\" />
+    <Folder Include="views\_css\bootstrapdatepicker\" />
     <Folder Include="views\_css\fonts\" />
     <Folder Include="functions\" />
     <Folder Include="classes\" />
@@ -66,8 +67,11 @@
     <Folder Include="views\_js\jquery\" />
     <Folder Include="views\_js\bootstrap\" />
     <Folder Include="views\_js\cliente\" />
+    <Folder Include="views\_js\bootstrapdatepicker\" />
+    <Folder Include="views\_js\jquerymask\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\_css\bootstrapdatepicker\bootstrap-datepicker.min.css" />
     <Content Include="views\_css\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="views\_css\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="views\_css\fonts\glyphicons-halflings-regular.ttf" />
@@ -84,6 +88,8 @@
     <Content Include="views\_css\bootstraptable\bootstrap-table.min.css" />
     <Content Include="views\_css\bootstrap\bootstrap.min.css" />
     <Content Include="views\_css\style.css" />
+    <Content Include="views\_js\bootstrapdatepicker\bootstrap-datepicker.min.js" />
+    <Content Include="views\_js\bootstrapdatepicker\bootstrap-datepicker.pt-BR.min.js" />
     <Content Include="views\_js\bootstraptable\bootstrap-table-pt-BR.js" />
     <Content Include="views\_js\bootstraptable\bootstrap-table.min.js" />
     <Content Include="views\_js\bootstrap\bootstrap.js" />
@@ -91,6 +97,7 @@
     <Content Include="views\_js\cliente\index.js" />
     <Content Include="views\_js\cliente\novo.js" />
     <Content Include="views\_js\global.js" />
+    <Content Include="views\_js\jquerymask\jquery.mask.min.js" />
     <Content Include="views\_js\jquery\jquery-3.2.1.min.js" />
   </ItemGroup>
 </Project>

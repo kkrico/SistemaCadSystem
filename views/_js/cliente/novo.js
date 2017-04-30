@@ -2,15 +2,16 @@
     Cadastro["Cliente"] = {
         ValidarRegras: function () {
             Cadastro.LimparValidacao();
-            var campoObrigatorioInvalido = Cadastro.ValidarCamposObrigatorios();
+            var campoObrigatorioValido = Cadastro.ValidarCamposObrigatorios();
 
-            var campoEmailInvalido = Cadastro.ValidarEmail();
+            var campoEmailValido = Cadastro.ValidarEmail();
 
             var campoCpfValido = Cadastro.ValidarCPF($("[name=cpf]").val());
+
             if (!campoCpfValido) {
                 $("[name=cpf]").closest(".form-group").addClass("has-error");
             }
-            var contemErros = campoEmailInvalido || campoObrigatorioInvalido || !campoCpfValido;
+            var contemErros = !campoEmailValido || !campoObrigatorioValido || !campoCpfValido;
             return !contemErros;
         },
 
