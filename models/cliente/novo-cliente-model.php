@@ -50,7 +50,7 @@ class NovoClienteModel extends MainModel
 		$query = $this->db->insert( 'tb_pessoa', $pessoa );
 
 		if ( $query ) {
-			$this->form_msg = '<p class="success">Notícia atualizada com sucesso!</p>';
+			$this->form_msg = '<p class="success">Cliente cadastrado com sucesso</p>';
 			return;
 
 		}
@@ -71,11 +71,11 @@ class NovoClienteModel extends MainModel
 
         return array("nome" => $_POST["nome"],
             "sobrenome" => $_POST["sobrenome"],
-            "rg" => $_POST["rg"],
+            "rg" => ($_POST["rg"] === "" ? null : $_POST["rg"]),
             "cpf" => str_replace("-", "", $cpf),
             "email" => $_POST["email"],
-            "sexo" => $_POST["sexo"],
-            "datanascimento" => $_POST["datanascimento"],
+            "sexo" => str_replace("/","",$_POST["sexo"]),
+            "datanascimento" => ($_POST["datanascimento"] === "" ? null : $_POST["datanascimento"]),
             "datacadastro" => date_create('now')->format('Y-m-d H:i:s'));
     }
 
