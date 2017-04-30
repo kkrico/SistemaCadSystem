@@ -48,6 +48,11 @@ class NovoClienteModel extends MainModel
 
         $pessoa = $this->buscarPessoa();
 		$query = $this->db->insert( 'tb_pessoa', $pessoa );
+        foreach ($tipoTelefone as $_POST["tipotelefone"])
+        {
+        	
+        }
+        
 
 		if ( $query ) {
 			$this->form_msg = '<p class="success">Cliente cadastrado com sucesso</p>';

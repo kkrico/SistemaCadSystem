@@ -12,8 +12,8 @@ $modelo->cadastrarCliente();
 
 
 <?php
-echo $modelo->form_msg;
 
+$modelo->mostrarMensagem();
 ?>
 
 <div id="validacao" class="oculto">
@@ -122,7 +122,7 @@ echo $modelo->form_msg;
             <div class='col-md-2'>
                 <div class="form-group">
                     <label class="control-label">Tipo de Telefone:</label>
-                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "TipoTelefone1") ?>
+                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "tipotelefone[]") ?>
                 </div>
             </div>
 
@@ -161,7 +161,7 @@ echo $modelo->form_msg;
             <div class='col-md-2'>
                 <div class="form-group">
                     <label class="control-label">Tipo de Telefone:</label>
-                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "TipoTelefone2") ?>
+                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "tipotelefone[]") ?>
                 </div>
             </div>
 
