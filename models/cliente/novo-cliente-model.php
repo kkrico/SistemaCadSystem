@@ -48,11 +48,26 @@ class NovoClienteModel extends MainModel
 
         $pessoa = $this->buscarPessoa();
 		$query = $this->db->insert( 'tb_pessoa', $pessoa );
-        foreach ($tipoTelefone as $_POST["tipotelefone"])
-        {
-        	
+
+        $idPessoa = $this->db->last_id;
+        if (isset($_POST["tipotelefone"])) {
+            for ($i = 0; $i < count($_POST["tipotelefone"]); $i++) {
+
+                $telefone = $this->buscarTelefone($i);
+
+                if($telefone !== null) {
+                    $query = $this->db->insert('tb_telefone', $telefone);
+
+                    if ($query) {
+                        $this->db->insert("tb_telefonepessoa", array(
+                            "tb_pessoa_idpessoa" => $idPessoa,
+                            "tb_telefone_idtelefone" => $this->db->last_id
+                            ));
+                    }
+                }
+            }
+
         }
-        
 
 		if ( $query ) {
 			$this->form_msg = '<p class="success">Cliente cadastrado com sucesso</p>';
@@ -61,6 +76,22 @@ class NovoClienteModel extends MainModel
 		}
 
 		$this->form_msg = '<p class="error">Erro ao enviar dados!</p>';
+    }
+
+    private function buscarTelefone($indice) {
+
+        $telefoneInvalido  = $_POST["dddtelefone"][$indice] === "" || $_POST["numtelefone"][$indice] === "";
+        if ($telefoneInvalido)
+            return null;
+
+
+        return array(
+            "tipotelefone" => ($_POST["tipotelefone"][$indice] === "" || $_POST["tipotelefone"][$indice] === "Selecione..." ? null : $_POST["tipotelefone"][$indice]),
+            "dddtelefone" => $_POST["dddtelefone"][$indice],
+            "numtelefone" => str_replace("-", "", $_POST["numtelefone"][$indice]),
+            "operadora" => ($_POST["operadora"][$indice] === "" ? null : $_POST["operadora"][$indice]),
+            "horariocontato" => ($_POST["horariocontato"][$indice] === "" ? null : $_POST["horariocontato"][$indice]),
+            );
     }
 
     private function buscarPessoa() {
