@@ -13,7 +13,7 @@ $modelo->cadastrarCliente();
 
 <?php
 
-$modelo->mostrarMensagem();
+$modelo->mostrarMensagem($modelo->form_msg);
 ?>
 
 <div id="validacao" class="oculto">

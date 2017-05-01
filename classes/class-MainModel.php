@@ -73,10 +73,21 @@ class MainModel
         }
     }
 
-    public function mostrarMensagem(){
+    public function mostrarMensagem($formMessage){
 
-        if (isset($_SESSION["MENSAGEM"])) {
-            echo "Uma mensagem";
+        if (isset($formMessage)) {
+            switch ($formMessage["tipo"])
+            {
+                case TipoMensagem::SUCESSO:
+                    echo "<div class='alert alert-success' >".$formMessage["texto"]."</div>";
+                    break;
+                case TipoMensagem::ALERTA:
+                    echo "<div class='alert alert-danger' >".$formMessage["texto"]."</div>";
+                    break;
+            	default:
+                    break;
+            }
+
         }
     }
 }

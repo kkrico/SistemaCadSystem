@@ -28,7 +28,6 @@ Cadastro = {
 
         var telefone1Valido = this._validarTelefone($("#telefone1 [data-obrigatorio-telefone][name^=dddtelefone]"),
                                                $("#telefone1 [data-obrigatorio-telefone][name^=numtelefone]"));
-        debugger;
 
         var telefone2Valido = this._validarTelefone($("#telefone2 [data-obrigatorio-telefone][name^=dddtelefone]"),
                                               $("#telefone2 [data-obrigatorio-telefone][name^=numtelefone]"));

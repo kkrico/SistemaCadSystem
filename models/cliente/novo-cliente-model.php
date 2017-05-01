@@ -58,12 +58,18 @@ class NovoClienteModel extends MainModel
         }
 
 		if ( $query ) {
-			$this->form_msg = '<p class="success">Cliente cadastrado com sucesso</p>';
+			$this->form_msg = array(
+                "tipo" => TipoMensagem::SUCESSO,
+                "texto" => '<p class="success">Cliente cadastrado com sucesso</p>',
+                );
 			return;
 
 		}
 
-		$this->form_msg = '<p class="error">Erro ao enviar dados!</p>';
+        $this->form_msg = array(
+                "tipo" => TipoMensagem::SUCESSO,
+                "texto" => '<p class="success">Erro ao enviar dados!</p>',
+                );
     }
 
     private function buscarTelefone($indice) {
