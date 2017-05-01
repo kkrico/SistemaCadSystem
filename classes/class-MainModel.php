@@ -46,9 +46,10 @@ class MainModel
 	}
 
 
-    public function dropDownPara($data, $textoPadrao, $nome) {
+    public function dropDownPara($data, $textoPadrao, $nome, $htmlAttributes) {
 
-        echo "<select class='form-control' name=".$nome.">";
+        $htmlAttributes = $htmlAttributes == null ? "" : $htmlAttributes;
+        echo "<select class='form-control' name=".$nome." ".$htmlAttributes.">";
 
         // Obtém as chaves como colunas e valores como valores
         foreach ( $data as $key => $val ) {

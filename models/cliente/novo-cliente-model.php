@@ -12,16 +12,9 @@ class NovoClienteModel extends MainModel
 {
 
     public function __construct( $db = false, $controller = null ) {
-		// Configura o DB (PDO)
 		$this->db = $db;
-
-		// Configura o controlador
 		$this->controller = $controller;
-
-		// Configura os parâmetros
 		$this->parametros = $this->controller->parametros;
-
-		// Configura os dados do usuário
 		$this->userdata = $this->controller->userdata;
 	}
 
@@ -32,15 +25,10 @@ class NovoClienteModel extends MainModel
 			return;
 		}
 
-		/*
-		Para evitar conflitos apenas inserimos valores se o parâmetro edit
-		não estiver configurado.
-         */
 		if ( chk_array( $this->parametros, 0 ) == 'edit' ) {
 			return;
 		}
 
-		// Só pra garantir que não estamos atualizando nada
 		if ( is_numeric( chk_array( $this->parametros, 1 ) ) ) {
 			return;
 		}

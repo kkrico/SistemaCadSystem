@@ -6,15 +6,32 @@
 }
 
 Cadastro = {
+    _validarTelefone: function (ddd, telefone) {
+
+        if (ddd.val() === "" && telefone.val() === "") {
+            return true;
+        }
+
+        if (ddd.val() === "") {
+            ddd.closest(".form-group").addClass("has-error");
+        } else if (telefone.val() === "") {
+            telefone.closest(".form-group").addClass("has-error");
+        }
+
+        return false;
+    },
+
     ValidarCamposObrigatorios: function () {
 
+        var telefone1Valido = this._validarTelefone($("#telefone1 [data-obrigatorio-telefone][name^=dddtelefone]"),
+                                               $("#telefone1 [data-obrigatorio-telefone][name^=numtelefone]"));
         var camposObrigatorios = $("[required]:not(input[type=radio])");
         var camposRadioObrigatorios = $("input[type=radio][required]");
 
-        var contemRadioPreenchido = camposRadioObrigatorios.toArray().some(function(campo) {
+        var contemRadioPreenchido = camposRadioObrigatorios.toArray().some(function (campo) {
             return $(campo).is(":checked");
         });
-        var contemAlgumCampoObrigatorioNaoPreenchido = camposObrigatorios.toArray().some(function(campo) {
+        var contemAlgumCampoObrigatorioNaoPreenchido = camposObrigatorios.toArray().some(function (campo) {
             return $(campo).val() === "";
         });
 
@@ -32,7 +49,7 @@ Cadastro = {
         });
 
 
-        var resultadoInValido = contemAlgumCampoObrigatorioNaoPreenchido || !contemRadioPreenchido;
+        var resultadoInValido = contemAlgumCampoObrigatorioNaoPreenchido || !contemRadioPreenchido || !telefone1Valido;
         if (resultadoInValido)
             CadSystem.MostrarMensagemErro("Favor informar campos obrigatórios");
 
