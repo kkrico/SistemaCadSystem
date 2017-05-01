@@ -11,6 +11,9 @@ Cadastro = {
         if (ddd.val() === "" && telefone.val() === "") {
             return true;
         }
+        if (ddd.val() !== "" && telefone.val() !== "") {
+            return true;
+        }
 
         if (ddd.val() === "") {
             ddd.closest(".form-group").addClass("has-error");
@@ -25,6 +28,10 @@ Cadastro = {
 
         var telefone1Valido = this._validarTelefone($("#telefone1 [data-obrigatorio-telefone][name^=dddtelefone]"),
                                                $("#telefone1 [data-obrigatorio-telefone][name^=numtelefone]"));
+        debugger;
+
+        var telefone2Valido = this._validarTelefone($("#telefone2 [data-obrigatorio-telefone][name^=dddtelefone]"),
+                                              $("#telefone2 [data-obrigatorio-telefone][name^=numtelefone]"));
         var camposObrigatorios = $("[required]:not(input[type=radio])");
         var camposRadioObrigatorios = $("input[type=radio][required]");
 
@@ -49,7 +56,7 @@ Cadastro = {
         });
 
 
-        var resultadoInValido = contemAlgumCampoObrigatorioNaoPreenchido || !contemRadioPreenchido || !telefone1Valido;
+        var resultadoInValido = contemAlgumCampoObrigatorioNaoPreenchido || !contemRadioPreenchido || !telefone1Valido || !telefone2Valido;
         if (resultadoInValido)
             CadSystem.MostrarMensagemErro("Favor informar campos obrigatórios");
 

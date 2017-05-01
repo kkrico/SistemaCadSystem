@@ -129,14 +129,14 @@ $modelo->mostrarMensagem();
             <div class='col-md-1'>
                 <div class="form-group">
                     <label class="control-label">DDD:</label>
-                    <input type="text" id="dddtelefone" name="dddtelefone[]" class="form-control" placeholder="DDD" data-obrigatorio-telefone />
+                    <input type="text" id="dddtelefone" name="dddtelefone[]" class="form-control" placeholder="DDD" data-obrigatorio-telefone data-mask="00"/>
                 </div>
             </div>
 
             <div class='col-md-3'>
                 <div class="form-group">
                     <label class="control-label">Nº Telefone</label>
-                    <input type="text" id="numtelefone1" name="numtelefone[]" class="form-control" placeholder="NºTelefone" data-obrigatorio-telefone />
+                    <input type="text" id="numtelefone1" name="numtelefone[]" class="form-control" placeholder="NºTelefone" data-obrigatorio-telefone data-mask="00000-0000"/>
                 </div>
             </div>
 
@@ -168,14 +168,14 @@ $modelo->mostrarMensagem();
             <div class='col-md-1'>
                 <div class="form-group">
                     <label class="control-label">DDD:</label>
-                    <input type="text" id="dddtelefone2" name="dddtelefone[]" class="form-control" placeholder="DDD" data-obrigatorio-telefone/ />
+                    <input type="text" id="dddtelefone2" maxlength="2" name="dddtelefone[]" class="form-control" placeholder="DDD" data-obrigatorio-telefone data-mask="00"/>
                 </div>
             </div>
 
             <div class='col-md-3'>
                 <div class="form-group">
                     <label class="control-label">Nº Telefone</label>
-                    <input type="text" id="numtelefone2" name="numtelefone[]" class="form-control" placeholder="NºTelefone" data-obrigatorio-telefone/ />
+                    <input type="text" id="numtelefone2" maxlength="10" name="numtelefone[]" class="form-control" placeholder="NºTelefone" data-obrigatorio-telefone data-mask="00000-0000"/>
                 </div>
             </div>
 

@@ -30,7 +30,6 @@
     <Compile Include="classes\class-MainController.php" />
     <Compile Include="controllers\cliente-controller.php" />
     <Compile Include="controllers\home-controller.php" />
-    <Compile Include="controllers\login-controller.php" />
     <Compile Include="functions\global-functions.php" />
     <Compile Include="includes\404.php" />
     <Compile Include="loader.php" />
@@ -39,13 +38,11 @@
     <Compile Include="views\cliente\indexcliente-view.php" />
     <Compile Include="views\cliente\novocliente-view.php" />
     <Compile Include="views\home\home-view.php" />
-    <Compile Include="views\login\login-view.php" />
     <Compile Include="views\_includes\footer.php" />
     <Compile Include="views\_includes\header.php" />
     <Compile Include="views\_includes\menu.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="views\login\" />
     <Folder Include="views\_css\bootstrapdatepicker\" />
     <Folder Include="views\_css\fonts\" />
     <Folder Include="functions\" />
