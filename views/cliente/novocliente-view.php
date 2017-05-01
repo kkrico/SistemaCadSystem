@@ -79,7 +79,7 @@ $modelo->mostrarMensagem();
 
             <div class='col-md-5'>
                 <label>Endereço:</label>
-                <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço" />
+                <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Endereço" data-obrigatorio-endereco/>
             </div>
         </div>
 
@@ -87,18 +87,18 @@ $modelo->mostrarMensagem();
         <div class="row">
             <div class='col-md-3'>
                 <label>Bairro:</label>
-                <input type="text" id="bairro" name="bairro" class="form-control" placeholder="Bairro" />
+                <input type="text" id="bairro" name="bairro" class="form-control" placeholder="Bairro" data-obrigatorio-endereco/>
             </div>
 
             <div class='col-md-2'>
                 <label>Cidade:</label>
-                <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Cidade" />
+                <input type="text" id="cidade" name="cidade" class="form-control" placeholder="Cidade" data-obrigatorio-endereco/>
             </div>
 
             <div class='col-md-1'>
                 <div class="form-group">
                     <label class="control-label">UF:</label>
-                    <?php $modelo->dropDownPara(UF::getConstants(), "UF", "uf") ?>
+                    <?php $modelo->dropDownPara(UF::getConstants(), "UF", "uf", "data-obrigatorio-endereco") ?>
                 </div>
             </div>
 
@@ -118,25 +118,25 @@ $modelo->mostrarMensagem();
         </div>
 
         <br />
-        <div class="row">
+        <div class="row" id="telefone1">
             <div class='col-md-2'>
                 <div class="form-group">
                     <label class="control-label">Tipo de Telefone:</label>
-                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "tipotelefone[]") ?>
+                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "tipotelefone[]", null) ?>
                 </div>
             </div>
 
             <div class='col-md-1'>
                 <div class="form-group">
                     <label class="control-label">DDD:</label>
-                    <input type="text" id="dddtelefone1" name="dddtelefone" class="form-control" placeholder="DDD" />
+                    <input type="text" id="dddtelefone" name="dddtelefone[]" class="form-control" placeholder="DDD" data-obrigatorio-telefone />
                 </div>
             </div>
 
             <div class='col-md-3'>
                 <div class="form-group">
                     <label class="control-label">Nº Telefone</label>
-                    <input type="text" id="numtelefone1" name="numtelefone" class="form-control" placeholder="NºTelefone" />
+                    <input type="text" id="numtelefone1" name="numtelefone[]" class="form-control" placeholder="NºTelefone" data-obrigatorio-telefone />
                 </div>
             </div>
 
@@ -144,52 +144,52 @@ $modelo->mostrarMensagem();
             <div class='col-md-2'>
                 <div class="form-group">
                     <label class="control-label">Operadora:</label>
-                    <input type="text" id="operadora1" name="operadora" class="form-control" placeholder="Operadora" />
+                    <input type="text" id="operadora1" name="operadora[]" class="form-control" placeholder="Operadora" />
                 </div>
             </div>
 
             <div class='col-md-4'>
                 <div class="form-group">
                     <label class="control-label">Melhor Horário para contato:</label>
-                    <input type="text" id="horariocontato1" name="horariocontato" class="form-control" placeholder="Melhor Horário" />
+                    <input type="text" id="horariocontato1" name="horariocontato[]" class="form-control" placeholder="Melhor Horário" />
                 </div>
             </div>
         </div>
 
         <br />
-        <div class="row">
+        <div class="row" id="telefone2">
             <div class='col-md-2'>
                 <div class="form-group">
                     <label class="control-label">Tipo de Telefone:</label>
-                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "tipotelefone[]") ?>
+                    <?php $modelo->dropDownPara(TipoTelefone::getConstants(), "Selecione...", "tipotelefone[]", null) ?>
                 </div>
             </div>
 
             <div class='col-md-1'>
                 <div class="form-group">
                     <label class="control-label">DDD:</label>
-                    <input type="text" id="dddtelefone2" name="dddtelefone" class="form-control" placeholder="DDD" />
+                    <input type="text" id="dddtelefone2" name="dddtelefone[]" class="form-control" placeholder="DDD" data-obrigatorio-telefone/ />
                 </div>
             </div>
 
             <div class='col-md-3'>
                 <div class="form-group">
                     <label class="control-label">Nº Telefone</label>
-                    <input type="text" id="numtelefone2" name="numtelefone" class="form-control" placeholder="NºTelefone" />
+                    <input type="text" id="numtelefone2" name="numtelefone[]" class="form-control" placeholder="NºTelefone" data-obrigatorio-telefone/ />
                 </div>
             </div>
 
             <div class='col-md-2'>
                 <div class="form-group">
                     <label class="control-label">Operadora:</label>
-                    <input type="text" id="operadora2" name="operadora" class="form-control" placeholder="Operadora" />
+                    <input type="text" id="operadora2" name="operadora[]" class="form-control" placeholder="Operadora" />
                 </div>
             </div>
 
             <div class='col-md-4'>
                 <div class="form-group">
                     <label class="control-label">Melhor Horário para contato:</label>
-                    <input type="text" id="horariocontato2" name="horariocontato" class="form-control" placeholder="Melhor Horário" />
+                    <input type="text" id="horariocontato2" name="horariocontato[]" class="form-control" placeholder="Melhor Horário" />
                 </div>
             </div>
         </div>
